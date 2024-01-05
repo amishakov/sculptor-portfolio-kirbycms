@@ -1,0 +1,106 @@
+title: about
+image:
+  back: gray-500
+  icon: false
+  query: false
+
+tabs:
+  
+  # CONTENT TAB
+  # ------------------
+  content:
+    sections:
+      content:
+        type: fields
+        fields:
+          
+          # BIOGRAPHY
+          # ------------------
+          biography:
+            label: Biography
+            type: textarea
+            size: medium
+          
+          # SOLO SHOWS
+          # ------------------
+          soloShows:
+            label: Solo shows
+            type: structure
+            fields:
+              name:
+                label: Name of the show
+                type: text
+              startingDate:
+                label: Starting date
+                type: date
+              endingDate:
+                label: Ending date
+                type: date
+          
+          # DUO SHOWS
+          # ------------------
+          duoShows:
+            label: Duo shows
+            type: structure
+            fields:
+              name:
+                label: Name of the show
+                type: text
+              startingDate:
+                label: Starting date
+                type: date
+              endingDate:
+                label: Ending date
+                type: date
+          
+          # GROUP SHOWS
+          # ------------------
+          groupShows:
+            label: Group shows
+            type: structure
+            fields:
+              name:
+                label: Name of the show
+                type: text
+              startingDate:
+                label: Starting date
+                type: date
+              endingDate:
+                label: Ending date
+                type: date
+          
+          # ASSISTANT
+          # ------------------
+          assistant:
+            label: Assistant
+            type: structure
+            fields:
+              name:
+                label: Name
+                type: text
+              startingDate:
+                label: Starting date
+                type: date
+              endingDate:
+                label: Ending date
+                type: date
+          
+          # RESIDENCIES
+          # ------------------
+          residencies:
+            label: Residencies
+            type: structure
+            fields:
+              name:
+                label: Name
+                type: text
+              startingDate:
+                label: Starting date
+                type: date
+              endingDate:
+                label: Ending date
+                type: date
+
+  # META TAB
+  # ------------------
+  meta: tabs/seo/meta

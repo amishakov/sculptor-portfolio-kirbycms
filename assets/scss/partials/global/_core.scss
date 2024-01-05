@@ -1,0 +1,162 @@
+:root {
+  --fs-1: 4.9rem;
+  --fs-2: 3.1rem;
+  --line-height: 0.9;
+
+  @media screen and (max-width: 1024px) {
+    --fs-1: 4rem;
+    --fs-2: 2.5rem;
+  }
+
+  @media screen and (max-width: 767px) {
+    --fs-1: 2.8rem;
+    --fs-2: 2rem;
+    --line-height: 0.95;
+  }
+
+  // Colors
+
+  --color-black: #000;
+  --color-white: #fff;
+
+  // Spacing and sizes
+
+  --global-gap: 1.5rem;
+  --margin-gap: 6rem;
+  --max-width-col: 90rem;
+
+  // Floating container values
+  --floating-w: 50rem;
+  --floating-h: 40rem;
+
+  //Themes
+
+  --theme-hov-duration: 0.15s;
+
+  --theme-0-bgc: #f9f9f9;
+  --theme-0-txt: #000;
+  // --theme-0-hov: #d8d8d8;
+
+  --theme-1-bgc: #000;
+  --theme-1-txt: #f9f9f9;
+  // --theme-1-hov: #d8d8d8;
+
+  --theme-2-bgc: #efbee0;
+  --theme-2-txt: #eb6b35;
+  // --theme-2-hov: #d8d8d8;
+
+  --theme-3-bgc: #eb6b35;
+  --theme-3-txt: #efbee0;
+  // --theme-3-hov: #f9f9f9;
+
+  --theme-4-bgc: #c2d7f3;
+  --theme-4-txt: #21505B;
+  // --theme-4-hov: #6dbbdc;
+
+  --theme-5-bgc: #21505B;
+  --theme-5-txt: #c2d7f3;
+  // --theme-5-hov: #f056a8;
+
+  --theme-6-bgc: #d9c8fB;
+  --theme-6-txt: #5D3CBF;
+  // --theme-6-hov: #665d31;
+
+  --theme-7-bgc: #5D3CBF;
+  --theme-7-txt: #d9c8fB;
+  // --theme-7-hov: #665d31;
+
+  // --theme-8-bgc: #b6b6b6;
+  // --theme-8-txt: #00ff78;
+  // --theme-8-hov: #00b3ff;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: "NHGTP", Helvetica Neue, Helvetica, Arial, sans-serif;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+}
+
+html::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #f9f9f9;
+  opacity: 0;
+  transition: all calc(var(--theme-hov-duration) * 1.5) ease-in-out;
+  overscroll-behavior: none;
+}
+
+picture {
+  img {
+    display: block;
+    // width: 100%;
+    // height: auto;
+    // max-width: 50vw;
+  }
+}
+
+h1 {
+  margin: 0;
+  font-size: var(--fs-1);
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: -0.1rem;
+  line-height: var(--line-height);
+}
+
+h2,
+p {
+  font-size: var(--fs-2);
+  font-weight: normal;
+  line-height: 1.1;
+  &::first-letter {
+    text-transform: capitalize;
+  }
+}
+
+a {
+  color: var(--color-black);
+  text-decoration: none;
+}
+
+#home,
+#about,
+#legal,
+#error,
+#project {
+  padding: var(--global-gap);
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
